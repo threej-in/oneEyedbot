@@ -1,7 +1,7 @@
 <?php
 /**
  * Message preprocessor php script.
- * @package one_eyed_bot [group moderator bot]
+ * @package oneEyedBot
  * @author threej [Jitendra Pal]
  * 
  * @version 0.1.0
