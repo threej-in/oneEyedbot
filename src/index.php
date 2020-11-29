@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * @package one_eyed_bot [group moderator bot]
+ * @package oneEyedBot [group moderator bot]
  * @author threej [ Jitendra Pal ]
  * @link http://threej.in/docs/telegram/bots/one_eyed_bot/index.php
  * 
