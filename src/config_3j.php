@@ -2,7 +2,7 @@
 /**
  * Main file for Telegram bot configuration
  * 
- * @package one_eyed_bot
+ * @package oneEyedBot
  * @author threej[Jitendra Pal]
  */
 
