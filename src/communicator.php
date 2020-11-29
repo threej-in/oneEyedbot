@@ -1,4 +1,10 @@
 <?php
+/**
+ * PHP script for establishing communication with Telegram bot API
+ * @package oneEyedBot
+ * @author threej[Jitendra Pal]
+ * @version 0.1.0
+*/
 
 /*####################### INCLUDE CONFIGURATION FILE ##################################*/
 require_once __DIR__.'/config_3j.php';
