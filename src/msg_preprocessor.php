@@ -14,6 +14,11 @@ require_once __DIR__."/communicator.php";
 //Database manipulation php script
 require_once __DIR__."/class/db_man_3j.php";
 
+define('BLINKINGCHIBI', 'CAACAgIAAxkBAAIDd1-EXuK2saBbv_6S6RTqjF11KV-zAALIAAMKu78k69LmAvFIA4gbBA');
+define('WAVINGHAND',"\xF0\x9F\x91\x8B");
+define('ROCKET',"\xF0\x9F\x9A\x80");
+define('POINTINGHAND',"\xF0\x9F\x91\x86");
+
 /* ###################### VALIDATE RECEIVED UPDATE ########################### */
 
 /**
