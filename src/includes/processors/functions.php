@@ -1,6 +1,6 @@
 <?php
 /**
- * TGBOTMODULE - Easy to use module for interacting with available methods in telegram bot api
+ * TGBOTMODULE - Easy to use module for available methods in telegram bot api
  * 
  * @package tgbotmodule
  * @author threej [Jitendra Pal]
@@ -21,16 +21,20 @@ class jarvis_functions{
      * Initializes chat_array and msg_array
      * @param int $chat_id chat_id received in the update
      * @param int $msg_id msg_id received in the update
+     * 
      */
     function __construct($chat_id, $msg_id)
     {
         define('MSGARR', ['message_id'=>$msg_id]);
         define('CHATARR', ['chat_id'=>$chat_id]);
-        define('PMHTML',['parsing-mode'=>'HTML']);
+        define('PMHTML',['parse_mode'=>'HTML']);
     }
     
     /**
      * Executes curl_handler function from COM class in communicator.php
+     * @param array $parameter array of parameter as specified in the telegram api
+     * @param bool $is_chat_id_req whether to include CHATARR or not
+     * @return array|bool - Curl response as array if DEBUGMODE is set true, else bool
      */
     private function execute($parameter, $is_chat_id_req = true)
     {
@@ -44,16 +48,17 @@ class jarvis_functions{
         return COM::curl_handler($parameter, $r);
     }
 
-    /**
+    /** 
      * Deletes existing message sent by bot in private chat and groups if have proper permission.
      * 
      * @return array|bool - Curl response as array if DEBUGMODE is set true, else bool
      */
-    function delete_msg(){
+    function delete_msg($delete_msg_id){
         
         return $this->execute([
             'method'=>'deletemessage',
-        ]+ MSGARR);
+            'message_id'=>$delete_msg_id
+        ]);
     }
     
     /**
